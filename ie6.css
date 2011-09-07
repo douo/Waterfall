@@ -1,0 +1,16 @@
+#nav{ position: absolute;}
+#wrap { padding-top:40px; }
+/*Anti IE6*/
+#anti_ie6 { text-align:center; background:yellow; line-height:20px; font-size:14px; margin:5px 0 0 0; height:20px; filter:alpha(opacity=80); }
+#anti_ie6 p strong { padding:0 5px; }
+/*Anti IE6 End*/
+#scroll{position:absolute;}
+#main { padding:0 5px 10px 5px; }
+#respond{ margin-left:10px;}
+.comment_text{ position:relative;}
+li.comment_odd { background:none; }
+.comment-childs{ width:600px;}
+.comment_text .thdrpy{ top:-40px;}
+.comment-childs .thdrpy{ top:5px;}
+.thdrpy a span{background-image:url(img/reply.gif);}
+.plugins-list table tr{height:1%;}

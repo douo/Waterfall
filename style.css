@@ -1,0 +1,212 @@
+/*  
+Theme Name: WaterFall
+Version: 1.0 alpha
+Theme URI: http://interjc.net/dev/gbw
+Description:单栏主题，力求简约而不简单。通过标准验证。希望您喜欢！有意见或建议或关注后续版本请至<a href="http://interjc.net/dev/waterfall">开发页面</a>。欢迎Follow me via Twitter: @<a href="http://twitter.com/interjc">interjc</a>
+Author: interjc
+Author URI: http://interjc.net/
+@License(GPL):http://www.gnu.org/licenses/gpl.html
+*/
+/*全局设置*/
+* { margin:0; padding:0; outline:none; }
+body { font:12px "Microsoft YaHei", Verdana, Geneva, sans-serif; text-align:center; background: #ECF5FF; color:#313131;}
+a { color:#003E7B; text-decoration:none; }
+a:hover { text-decoration:underline; }
+h1 { font-size:24px; }
+h2 { font-size:18px; }
+h3 { font-size:14px; }
+cite{ font-style: normal; font-weight:bold;}
+small,small a{ font-size:11px;}
+a img,img{ border:none; max-width:90%; height:auto;}
+del { color:#ccc !important; }
+q, blockquote { padding:0 5px 0 10px; margin:10px 0 10px 20px; border-left:3px solid #D7D7D7; }
+#wrap { width:860px; margin:0 auto; padding:27px 50px 10px 50px; text-align:left; background:#E8F6FF url(img/bg.png) repeat-y; position: relative; }
+/*页首*/
+#header { display:none; }
+#header_title { text-align:center; font-weight:bold; height:50px; background:#93BFDB url(img/title-bg.png) no-repeat; }
+#header_title h1, #header_title p { display:inline; padding:0 10px; line-height:50px; }
+#header_title a, #header_title p { color:#000; }
+#header_title a:hover { text-decoration:none; color:#313131; }
+/*页首结束*/
+/*导航栏*/
+#nav {position:fixed; top:0; left:0; width:100%; clear:both; z-index:100000;}
+#nav .inner{text-align:center; background:url(img/bg.png) repeat-y; padding:5px 50px 8px 50px; height:27px; width:860px; margin:0 auto; position:relative;}
+#nav ul { list-style:none; line-height:27px; text-align:center; }
+#nav li { position:relative; }
+#nav ul li { padding:0 10px; height:27px; float:left; }
+#nav ul li a { color: #313131; text-decoration:none; font-size:14px; /*font-weight:bold;*/
+	line-height:27px; }
+#nav ul li.current_page_item { background: #A4C9E2; }
+#nav ul li.current_page_item a { color:#FFF; font-weight:bold;}
+/*导航栏结束*/
+/*多级导航栏*/
+#nav ul li ul { display:none; text-align:left; }
+#nav li ul { position:absolute; left:0; top:27px; display:none; }
+#nav li ul li { float:none; width:150px; background:#A4C9E2; }
+#nav li ul li a { color:#fff; }
+#nav li ul li ul { position:absolute; left:170px; margin:-27px 0 0 0; }
+#nav ul li.nav_li_hover { background:#000; }
+#nav ul li.nav_li_hover a { color: #fff; }
+/*li which has ul*/
+#nav .li_ul { }
+/*多级导航栏结束*/
+/*导航栏按钮*/
+#nav_buttons{ position:absolute; right:60px; top:0; height:32px;}
+#nav_buttons a{ float:right; display:inline; margin:3px 0 0 10px; text-indent:-10000px;}
+#nav_buttons a#nav_rss { height:28px; width:28px; background: url(img/nav-rss2.png) no-repeat left top;}
+#nav_buttons a#nav_inter{ background:url(img/inter.png) no-repeat; height:30px; width:30px;}
+#nav_buttons a#nav_comment{ background:url(img/nav-comment.jpg) no-repeat right top; height:29px; width:26px; margin-top:5px;}
+#nav_buttons a#nav_email { height:28px; width:28px; background: url(img/icons-sns.jpg) no-repeat -28px top;}
+#nav_buttons a#nav_twitter { height:28px; width:28px; background: url(img/icons-sns.jpg) no-repeat -56px top;}
+#nav_buttons a#nav_facebook { height:28px; width:28px; background: url(img/icons-sns.jpg) no-repeat right top;}
+/*导航栏按钮结束*/
+/*正文*/
+#main { padding:10px 5px;}
+#content{ clear:both; height:1%;overflow:auto; padding:0 0 10px 0; border-bottom:1px solid #ccc; }
+#content{overflow-x:hidden;}
+.story { padding:10px 0; }
+.story_not_first { border-top:1px solid #fff; }
+.story_not_last { border-bottom:1px solid #ccc; }
+.story h2 { line-height:30px; font-size:20px; }
+.entry { padding:10px 0; line-height:18px; }
+.entry a { color:#0E6C7E; padding-left:18px; background:url(img/href.gif) no-repeat left 1px; }
+.entry a:hover { background-position:left -49px; }
+.entry p { padding-bottom:3px; }
+.entry ul, .entry ol, .entry dl { padding:5px 0 5px 25px; }
+.entry .postmetadata { padding-top:5px; text-align:right; }
+.entry .inner{ font-size:13px; line-height:1.8;}
+.entry .inner a img,.entry .inner img{ background:#fff; border:1px solid #ccc; padding:3px; margin:3px;}
+.entry .inner img.hover{ border-color:#003E7B;}
+.entry .inner p{ padding-bottom:0.7em;}
+.entry_copyright { border-left:3px solid red; padding:5px 10px; margin:10px 0 0 0;}
+#SRBacks { margin:0 0 10px 0; padding:5px 10px; border-left:3px solid red; }
+.entry .postmetadata a, .entry_copyright a, a.more-link, .entry p.page_nav a, .entry a.hasIMG, #SRBacks a { padding:0; background:none; }
+a.more-link{ display:block; text-indent:-10000px; margin:5px 0; height:30px; width:70px; background:url(img/readmore.jpg) no-repeat left top;}
+a.more-link:hover{background-position:left -30px;}
+.meta img.avatar { display:none; }
+/*导航开始*/
+.navigation { padding:0 10px; line-height:24px; height:28px; clear:both; overflow:hidden; }
+.navigation .nav_prev { float:left; }
+.navigation .nav_next { float:right; }
+.navigation .pagebar { padding: 0.2em 0.5em; margin-right: 0.1em; margin-bottom: 1.0em; /*border: 1px solid #fff;background: #fff;*/ text-decoration: none; text-align: center; }
+.navigation .pagebar a, .navigation .pageList .this-page { border: 1px solid #9AAFE5; text-decoration: none; padding: 0.2em 0.5em; }
+.navigation .pagebar a:visited { border: 1px solid #9AAFE5; text-decoration: none; padding: 0.2em 0.5em; }
+.navigation .pagebar .break { padding: 2px 6px 2px 6px; border: none; /*background: #fff;*/
+	text-decoration: none; }
+.navigation .pagebar .this-page { border: 1px solid #2E6AB1; padding: 0.2em 0.5em; font-weight: bold; background: #2E6AB1; color: #fff; }
+.navigation .pagebar a:hover { border-color: #2E6AB1; }
+.navigation .pagebar .inactive { border: 1px solid #cccccc; color: #ccc; text-decoration: none; padding: 0.2em 0.5em; }
+/*导航结束*/
+/*正文结束*/
+/*评论部分*/
+div.comments-template { border-top:1px solid #ccc; margin-top:10px; }
+div.comments-templates { border-top:1px solid #fff; padding:10px; }
+h3#comments, #respond h3 { font-size:14px; line-height:16px; padding-bottom:10px; }
+ol.commentlist { list-style:none; }
+ol.commentlist li.comment_li { margin-bottom:10px; padding:5px 0 5px 5px;position:relative;}
+ol.commentlist li img.avatar { display:inline; float:left; height:32px; width:32px; padding:1px; border:1px solid #CCC; margin-right:5px; }
+ol.commentlist li div.commentmetadata { float:left; line-height:16px; width:700px;padding-bottom:5px; }
+ol.commentlist li div.commentmetadata a { color: #002346; }
+ol.commentlist li strong.commentmetadata { display:block; line-height:19px; font-size:12px; color:#666; }
+ol.commentlist li span.commentmetadata { display:block; font-size:11px; }
+ol.commentlist li span.commentmetadata em { font-style:normal; font-size:11px; padding-left:5px; color:#666; }
+.comment_text { clear:both; line-height:20px;}
+li.comment_odd { background:#ecf5ff; }
+li.author_comment {background: #d7fafa;}
+#commentform{position:relative;}
+#cancel_reply{position:absolute; top:5px; left:400px;}
+#cancel_reply a{ background:url(img/cancel.gif) no-repeat left top; display:block; height:16px; width:16px; text-indent:-10000px;}
+#commentform p { padding:5px 0; }
+#commentform p label { padding-left:5px; }
+input.comment_submit { border:1px solid #ccc; border-right:3px solid #002346; padding:3px 10px; font-size:14px; line-height:14px; background:#fff; }
+span.comment_submit { color:#666; font-size:11px; padding-left:10px; }
+/*WP-Spread-Comment*/
+.editComment, .editableComment, .textComment { display: inline; }
+.comment-childs { border: 1px solid #ccc; border-width:0 0 0 3px; margin: 8px 0 2px 8px; padding: 4px 0 2px 8px; position:relative;}
+.thdrpy{clear:both;display:none;position:absolute;top:5px;left:200px;}
+.thdrpy a{color:#ccc;}
+.thdrpy a span{background:url(img/reply.png) no-repeat left top; display:inline; float:left; height:15px; width:15px; margin-top:2px; text-indent:-10000px;}
+.thdrpy a:hover{color:#000; text-decoration:none;}
+.thdrpy a:hover span{ background-position:-15px top;}
+.chalt { /* background-color: #E2E2E2; */}
+#newcomment { border:1px dashed #777; width:90%; }
+#newcommentsubmit { color:red; }
+.adminreplycomment { border:1px dashed #777; width:99%; margin:4px; padding:4px; }
+.mvccls { color: #999; }
+/*Trackback Pingback*/
+.trackback-pingback{ clear:both; /* height:1%; overflow:auto; */ padding:0 10px; margin:10px 0; border-left:3px solid red;}
+ol.pinglist{list-style:none;}
+ol.pinglist li{ line-height:24px;}
+.welcome-back{display:none;}
+/*评论结束*/
+/*Widgets*/
+#sidebar { padding:20px 0 10px 0; border-top:1px solid #fff; overflow:auto; height:1%; line-height:18px; }
+.sidebar { width:260px; padding:0 0 0 20px; float:left; background:url(img/sidebar-bg2.png) repeat-y left; }
+.sidebar h2 { line-height:24px; padding-bottom:5px; }
+.sidebar ul { list-style:none; }
+.sidebar li.widget { padding-bottom:15px; }
+#sidebar-1 { background:none; }
+#sidebar-2 { }
+#sidebar-3 { }
+/*Widgets End*/
+/*页尾*/
+#footer { border-top:1px solid #ccc; color:#003E7B; text-align:center;}
+#footer p {border-top:1px solid #fff; height:50px; line-height:50px; }
+#footer p a { padding:0 3px; }
+/*页尾结束*/
+/* 日历 */
+#wp-calendar { empty-cells: show; padding:5px; width: 170px; }
+#wp-calendar #next a { padding-right: 10px; text-align: right; }
+#wp-calendar #prev a { padding-left: 10px; text-align: left; }
+#wp-calendar a { display: block; }
+#wp-calendar caption { text-align: center; }
+#wp-calendar td { padding: 0; text-align: center; }
+/* 日历结束 */
+/*Searchform*/
+#searchform{position:relative; height:22px; width:180px;}
+#searchform input{border:1px solid #ccc; padding:4px 22px; height:14px; font-size:12px; width:136px;}
+#searchform input:focus{border-color:#79a8e7;}
+#searchform #searchsubmit,#searchform #searchreset{border:0 none; text-indent:-10000px; background:url(img/search.png) no-repeat; height:20px; width:20px; display:block; padding:0; position:absolute; top:3px;}
+html>body #searchform #searchsubmit,html>body #searchform #searchreset{top:2px;}
+#searchform #searchsubmit{background-position:left top; left:2px;}
+#searchform #searchsubmit:hover{background-position:left bottom;}
+#searchform #searchreset{display:none;background-position:right top; right:2px;}
+#searchform #searchreset:hover{background-position:right bottom;}
+/*Better Blogroll*/
+#better-blogroll { clear:both; }
+#better-blogroll li { padding:0 10px 3px 19px; width:100px; float:left; background: url(img/cup.png) no-repeat left top; }
+#better-blogroll a.co-worker { color:#F00; }
+/*widget_bb_blc_latestcomments*/
+li.widget_bb_blc_latestcomments ul li small a { font-size:11px; }
+li.blclastcommentedposts li.alternate small a { font-size:11px; }
+/*Zelig Show Plugin*/
+.plugins-list{line-height:20px;}
+.plugins-list table{margin-bottom:10px; padding-bottom:10px; border-bottom:1px dotted #ccc;}
+.plugins-list table tr{vertical-align:top; display:block; margin-bottom:10px; overflow:auto; clear:both;}
+.plugins-list table tr td{float:left;}
+.plugins-list .td-1{width:15%;}
+.plugins-list .td-2{width:10%; text-align:center;}
+.plugins-list .td-3{width:75%;}
+.alternate-plug-row{}
+.plug-row{background:#d7fafa;}
+/* wp_syntax */
+div.wp_syntax{ width:auto;}
+/*回到页首*/
+#scroll{clear:both; width:32px; height:76px; position:fixed; left:50%; bottom:30px; margin:0 0 0 430px; z-index:99;}
+#scroll a{ background:url(img/scroll.jpg) no-repeat; float:left; display:inline; text-indent:-10000px; width:32px; height:38px;}
+#scroll a.back-to-top{ background-position:left top;}
+#scroll a.back-to-top:hover{ background-position:right top;}
+#scroll a.back-to-bottom{ background-position:left bottom;}
+#scroll a.back-to-bottom:hover{ background-position:right bottom;}
+/*其他*/
+.clear { clear:both; line-height:0; }
+.none,.hidden{ display:none; }
+.show{ display:block;}
+.alignright { display:inline; float:right; margin-left:5px;}
+.alignleft { display:inline; float:left; margin-right:5px;}
+.alignright, .alignleft { display:inline; }
+.textcenter { text-align:center; }
+.shadow{ text-shadow:0 1px 0 #fff;}
+.input-border-blue{ border:1px solid #79a8e7;}
+/*宽屏*/
+.wide #scroll{ margin:0 0 0 480px;}
